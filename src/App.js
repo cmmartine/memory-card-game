@@ -33,7 +33,8 @@ function App() {
       let copy = [...cards];
       copy.splice(cardIndex, 1, card);
       setCards(shuffle(copy));
-      setCurrentScore(currentScore + 1);
+      checkCurrentScoreAndStatus();
+      checkBestScore();
     } else {
       resetGame();
     }
@@ -53,6 +54,22 @@ function App() {
     setCurrentScore(0);
   }
 
+  function checkBestScore() {
+    if (currentScore >= bestScore) {
+      setBestScore(bestScore + 1);
+    }
+  }
+
+  function checkCurrentScoreAndStatus() {
+    if (currentScore + 1 < cardArray.length) {
+      setCurrentScore(currentScore + 1);
+    } else if (currentScore + 1 === cardArray.length) {
+      setBestScore(currentScore + 1);
+      alert("Congratulations, you got all the cards!");
+      resetGame();
+    }
+  }
+
   function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
   }
@@ -60,7 +77,7 @@ function App() {
   return (
     <div>
       <div className="status-container">
-        <StatusDOM currentScore={currentScore} bestScore={bestScore} />
+        <StatusDOM currentScore={currentScore} bestScore={bestScore} cardArray={cardArray} />
       </div>
 
       <div className="cards-container">
