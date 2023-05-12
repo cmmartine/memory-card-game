@@ -32,10 +32,29 @@ function App() {
       };
       let copy = [...cards];
       copy.splice(cardIndex, 1, card);
-      setCards(copy);
+      setCards(shuffle(copy));
+      setCurrentScore(currentScore + 1);
     } else {
-      
+      resetGame();
     }
+  }
+
+  function resetGame() {
+    let copy = [...cards];
+    const resetCopy = copy.map((card) => {
+      return card = {
+        name: card.name,
+        image: card.image,
+        id: card.id,
+        picked: false,
+      };
+    });
+    setCards(shuffle(resetCopy));
+    setCurrentScore(0);
+  }
+
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
   }
 
   return (
