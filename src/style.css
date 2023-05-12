@@ -1,0 +1,24 @@
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 85vh;
+}
+
+.card-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16%;
+  height: 40%;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.card-inner {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+}
