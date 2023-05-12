@@ -8,6 +8,7 @@ export default function CardDOM(props) {
 
   return (
     <div className="card-inner" onClick={(e) => {props.selectCard(name, image, id, cardIndex, pickedStatus)}}>
+      <img src={image} alt={name} className='image' />
       <p>{name}</p>
     </div>
   )

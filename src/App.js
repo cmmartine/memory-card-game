@@ -3,19 +3,30 @@ import uniqid from 'uniqid';
 import CardDOM from './components/cardDOM';
 import StatusDOM from './components/statusDOM';
 import './style.css';
+import asp from './images/Asp.jpg';
+import centipede from './images/Centipede.jpg';
+import condor from './images/Condor.jpg';
+import dragon from './images/Dragon.jpg';
+import griffon from './images/Griffon.jpg'
+import leopard from './images/Leopard.jpg';
+import phoenix from './images/Phoenix.jpg';
+import rabbit from './images/Rabbit.jpg';
+import rat from './images/Rat.jpg';
+import salamander from './images/Salamander.jpg';
+
 
 function App() {
   const cardArray = [
-    {name: 'Asp', image: '', id: uniqid(), picked: false},
-    {name: 'Centipede', image: '', id: uniqid(), picked: false},
-    {name: 'Condor', image: '', id: uniqid(), picked: false},
-    {name: 'Dragon', image: '', id: uniqid(), picked: false},
-    {name: 'Griffin', image: '', id: uniqid(), picked: false},
-    {name: 'Leopard', image: '', id: uniqid(), picked: false},
-    {name: 'Phoenix', image: '', id: uniqid(), picked: false},
-    {name: 'Rabbit', image: '', id: uniqid(), picked: false},
-    {name: 'Rat', image: '', id: uniqid(), picked: false},
-    {name: 'Salamander', image: '', id: uniqid(), picked: false},
+    {name: 'Asp', image: asp, id: uniqid(), picked: false},
+    {name: 'Centipede', image: centipede, id: uniqid(), picked: false},
+    {name: 'Condor', image: condor, id: uniqid(), picked: false},
+    {name: 'Dragon', image: dragon, id: uniqid(), picked: false},
+    {name: 'Griffon', image: griffon, id: uniqid(), picked: false},
+    {name: 'Leopard', image: leopard, id: uniqid(), picked: false},
+    {name: 'Phoenix', image: phoenix, id: uniqid(), picked: false},
+    {name: 'Rabbit', image: rabbit, id: uniqid(), picked: false},
+    {name: 'Rat', image: rat, id: uniqid(), picked: false},
+    {name: 'Salamander', image: salamander, id: uniqid(), picked: false},
   ]
 
   const [cards, setCards] = useState(cardArray);
@@ -75,7 +86,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="content-container">
       <div className="status-container">
         <StatusDOM currentScore={currentScore} bestScore={bestScore} cardArray={cardArray} />
       </div>
