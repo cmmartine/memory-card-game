@@ -22,6 +22,22 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
+  function selectCard(name, image, id, cardIndex, pickedStatus) {
+    if (pickedStatus === false) {
+      const card = {
+        name: name,
+        image: image,
+        id: id,
+        picked: true,
+      };
+      let copy = [...cards];
+      copy.splice(cardIndex, 1, card);
+      setCards(copy);
+    } else {
+      
+    }
+  }
+
   return (
     <div>
       <div className="status-container">
@@ -31,7 +47,7 @@ function App() {
       <div className="cards-container">
         {cards.map((card) => (
           <div key={card.id} className="card-outer">
-            <CardDOM card={card} />
+            <CardDOM card={card} index={cards.indexOf(card)} selectCard={selectCard}/>
           </div>
         ))}
       </div>
