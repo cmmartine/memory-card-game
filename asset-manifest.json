@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.e97b8b06.css",
+    "main.js": "/memory-card-game/static/js/main.b6dc7769.js",
+    "static/media/Phoenix.jpg": "/memory-card-game/static/media/Phoenix.705089b88691b505e86d.jpg",
+    "static/media/Dragon.jpg": "/memory-card-game/static/media/Dragon.c60f3c7f7ae15408e8af.jpg",
+    "static/media/Asp.jpg": "/memory-card-game/static/media/Asp.7bd92a339ad96ffa036d.jpg",
+    "static/media/Rabbit.jpg": "/memory-card-game/static/media/Rabbit.aea40faf123c2c6af205.jpg",
+    "static/media/Salamander.jpg": "/memory-card-game/static/media/Salamander.d495373066e0a571d153.jpg",
+    "static/media/Rat.jpg": "/memory-card-game/static/media/Rat.48bd3739909bf5198aa8.jpg",
+    "index.html": "/memory-card-game/index.html",
+    "main.e97b8b06.css.map": "/memory-card-game/static/css/main.e97b8b06.css.map",
+    "main.b6dc7769.js.map": "/memory-card-game/static/js/main.b6dc7769.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e97b8b06.css",
+    "static/js/main.b6dc7769.js"
+  ]
+}
